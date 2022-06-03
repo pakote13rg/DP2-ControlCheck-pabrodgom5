@@ -198,13 +198,13 @@ public class InventorChimpumUpdateService implements AbstractUpdateService<Inven
 		String pattern;
 		pattern = request.getModel().getString("pattern");
 		final LocalDate cm =  entity.getCreationMoment().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-		entity.setCode(pattern + "-" + this.generateCode(cm));
+		entity.setCode(pattern + "-" + this.codeGenerator(cm));
 
 		this.repository.save(entity);
 		
 	}
 
-	public String generateCode(final LocalDate creationMoment) {
+	public String codeGenerator(final LocalDate creationMoment) {
 		String res = "";
 		Integer day;
 		Integer month;
@@ -213,40 +213,41 @@ public class InventorChimpumUpdateService implements AbstractUpdateService<Inven
 		day =creationMoment.getDayOfMonth();
 		month =creationMoment.getMonthValue();
 		year =creationMoment.getYear();
-		String tYear= "";
-		String tDay= "";
-		String tMonth= "";
 		
-		tYear = year.toString().substring(2, 4);
+		String strYear= "";
+		String strDay= "";
+		String strMonth= "";
+		
+		strYear = year.toString().substring(2, 4);
 		
 		if(day.toString().length()==1) {
 			
-			tDay = "0" +day.toString();
+			strDay = "0" +day.toString();
 			
 			
 		}
 		
 		else{
 
-			tDay = day.toString();
+			strDay = day.toString();
 			
 		}
 		
 		if(month.toString().length()==1) {
 			
-			tMonth = "0" +month.toString();
+			strMonth = "0" +month.toString();
 			
 			
 		}
 		
 		else{
 			
-			tMonth = month.toString();
+			strMonth = month.toString();
 			
 			
 		}
 		
-		res= tYear + "-" + tMonth + "-" + tDay;
+		res= strYear + "-" + strMonth + "-" + strDay;
 		
 		return res;
 		
