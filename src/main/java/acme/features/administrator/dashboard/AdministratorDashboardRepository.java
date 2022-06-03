@@ -67,21 +67,21 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	List<String> maximunBudgetOfToolGroupedByCurrency();
 	
 	
-	//CHIMPUM
-	@Query("select 1.0 * count(a) / (select count(b) from Item b) from Chimpum a")
-	Double getRatioOfItemsWithChimpum();
+	//Sisit
+	@Query("select 1.0 * count(a) / (select count(b) from Item b where b.itemType = acme.entities.items.ItemType.TOOL) from Sisit a")
+	Double getRatioOfToolsWithSisit();
 	
-	@Query("select t.budget.currency, avg(t.budget.amount) from Chimpum t  group by t.budget.currency")
-	List<String> getAverageBudgetOfChimpumGroupedByCurrency();
+	@Query("select t.share.currency, avg(t.share.amount) from Sisit t where t.item.itemType = acme.entities.items.ItemType.TOOL  group by t.share.currency")
+	List<String> getAverageShareOfSisitGroupedByCurrency();
 	
-	@Query("select t.budget.currency, stddev(t.budget.amount) from Chimpum t group by t.budget.currency")
-	List<String> getDeviationBudgetOfChimpumGroupedByCurrency();
+	@Query("select t.share.currency, stddev(t.share.amount) from Sisit t where t.item.itemType = acme.entities.items.ItemType.TOOL group by t.share.currency")
+	List<String> getDeviationShareOfSisitGroupedByCurrency();
 	
-	@Query("select t.budget.currency, min(t.budget.amount) from Chimpum  t group by t.budget.currency")
-	List<String> getMinimunBudgetOfChimpumGroupedByCurrency();
+	@Query("select t.share.currency, min(t.share.amount) from Sisit  t where t.item.itemType = acme.entities.items.ItemType.TOOL group by t.share.currency")
+	List<String> getMinimunShareOfSisitGroupedByCurrency();
 	
-	@Query("select  t.budget.currency, max(t.budget.amount) from Chimpum t  group by t.budget.currency")
-	List<String> getMaximunBudgetOfChimpumGroupedByCurrency();
+	@Query("select  t.share.currency, max(t.share.amount) from Sisit t where t.item.itemType = acme.entities.items.ItemType.TOOL group by t.share.currency")
+	List<String> getMaximunShareOfSisitGroupedByCurrency();
 	
 	//COMPONENT
 	@Query("select count(c) from Item c where c.itemType = acme.entities.items.ItemType.COMPONENT")

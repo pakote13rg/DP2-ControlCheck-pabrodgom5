@@ -1,3 +1,5 @@
+<%--
+
 <%@page language="java"%>
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -10,3 +12,4 @@
 	<acme:list-column code="inventor.chimpum.list.label.startDate" path="startDate" width="10%"/> 
 	<acme:list-column code="inventor.chimpum.list.label.endDate" path="endDate" width="10%"/> 
 </acme:list>
+			--%>

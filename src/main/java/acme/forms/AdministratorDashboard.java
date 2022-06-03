@@ -51,11 +51,11 @@ public class AdministratorDashboard implements Serializable {
 	Map<Pair<PatronageStatus,String>,Double> maximunBudgetOfPatronagesGroupedByStatusAndCurrency;
 	
 	@Min(0)
-	Double ratioOfItemsWithChimpum;
-	Map<String,Double> averageBudgetOfChimpumGroupedByCurrency;
-	Map<String,Double> deviationBudgetOfChimpumGroupedByCurrency;
-	Map<String,Double> minimunBudgetOfChimpumGroupedByCurrency;
-	Map<String,Double> maximunBudgetOfChimpumGroupedByCurrency;
+	Double ratioOfToolsWithSisit;
+	Map<String,Double> averageBudgetOfSisitGroupedByCurrency;
+	Map<String,Double> deviationBudgetOfSisitGroupedByCurrency;
+	Map<String,Double> minimunBudgetOfSisitGroupedByCurrency;
+	Map<String,Double> maximunBudgetOfSisitGroupedByCurrency;
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------

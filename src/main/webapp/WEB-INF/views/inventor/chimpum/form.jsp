@@ -1,3 +1,5 @@
+<%--
+
 <%@page language="java"%>
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -30,4 +32,4 @@
 		<acme:button code="inventor.chimpum.form.button.items" action="/inventor/item/show?id=${itemId}"/>
 	</jstl:when>
 </jstl:choose>
-</acme:form>
+</acme:form>			--%>

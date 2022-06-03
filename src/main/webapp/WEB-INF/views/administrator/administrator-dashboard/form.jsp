@@ -29,13 +29,13 @@ acme.entities.patronages.PatronageStatus"%>
 			<acme:message code="administrator.dashboard.form.label.ratio"/>
 		</th>
 		<td>
-			<acme:print value="${ratioOfItemsWithChimpum}"/>
+			<acme:print value="${ratioOfToolsWithSisit}"/>
 		</td>
 	</tr>
 </table>
 
 
-<h2><acme:message code="administrator.dashboard.form.label.chimpum.average-budget"/></h2>
+<h2><acme:message code="administrator.dashboard.form.label.sisit.average-budget"/></h2>
 <br>
 <table class="table table-sm" aria-describedby="">
 		<jstl:forEach items="${currencies}" var="currency">
@@ -44,7 +44,7 @@ acme.entities.patronages.PatronageStatus"%>
 					<acme:print value="${currency}"/>
 				</th>
 				<td>
-					<acme:print value="${averageBudgetOfChimpumGroupedByCurrency.getOrDefault(currency,0.0)}"/>
+					<acme:print value="${averageBudgetOfSisitGroupedByCurrency.getOrDefault(currency,0.0)}"/>
 				</td>
 			</tr>
 		</jstl:forEach>
@@ -52,7 +52,7 @@ acme.entities.patronages.PatronageStatus"%>
  
 
  
-	<h2><acme:message code="administrator.dashboard.form.label.chimpum.deviation-budget"/></h2>
+	<h2><acme:message code="administrator.dashboard.form.label.sisit.deviation-budget"/></h2>
 	<br>
 	<table class="table table-sm" aria-describedby="">
 		<jstl:forEach items="${currencies}" var="currency">
@@ -61,7 +61,7 @@ acme.entities.patronages.PatronageStatus"%>
 					<acme:print value="${currency}"/>
 				</th>
 				<td>
-					<acme:print value="${deviationBudgetOfChimpumGroupedByCurrency.getOrDefault(currency,0.0)}"/>
+					<acme:print value="${deviationBudgetOfSisitGroupedByCurrency.getOrDefault(currency,0.0)}"/>
 				</td>
 			</tr>
 		</jstl:forEach>
@@ -69,7 +69,7 @@ acme.entities.patronages.PatronageStatus"%>
  
 
  
-<h2><acme:message code="administrator.dashboard.form.label.chimpum.minimun-budget"/></h2>
+<h2><acme:message code="administrator.dashboard.form.label.sisit.minimun-budget"/></h2>
 <br>
 <table class="table table-sm" aria-describedby="">
 		<jstl:forEach items="${currencies}" var="currency">
@@ -78,7 +78,7 @@ acme.entities.patronages.PatronageStatus"%>
 					<acme:print value="${currency}"/>
 				</th>
 				<td>
-					<acme:print value="${minimunBudgetOfChimpumGroupedByCurrency.getOrDefault(currency,0.0)}"/>
+					<acme:print value="${minimunBudgetOfSisitGroupedByCurrency.getOrDefault(currency,0.0)}"/>
 				</td>
 			</tr>
 		</jstl:forEach>
@@ -86,7 +86,7 @@ acme.entities.patronages.PatronageStatus"%>
  
 
  
-<h2><acme:message code="administrator.dashboard.form.label.chimpum.maximun-budget"/></h2>
+<h2><acme:message code="administrator.dashboard.form.label.sisit.maximun-budget"/></h2>
 <br>
 <table class="table table-sm" aria-describedby="">
 		<jstl:forEach items="${currencies}" var="currency">
@@ -95,7 +95,7 @@ acme.entities.patronages.PatronageStatus"%>
 					<acme:print value="${currency}"/>
 				</th>
 				<td>
-					<acme:print value="${maximunBudgetOfChimpumGroupedByCurrency.getOrDefault(currency,0.0)}"/>
+					<acme:print value="${maximunBudgetOfSisitGroupedByCurrency.getOrDefault(currency,0.0)}"/>
 				</td>
 			</tr>
 		</jstl:forEach>

@@ -65,12 +65,12 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		final Map<String,Double> maximunBudgetOfToolGroupedByCurrency;
 		
 		
-		//CHIMPUM DECLARACION
-		final Double ratioOfItemsWithChimpum;
-		final Map<String,Double> averageBudgetOfChimpumGroupedByCurrency;
-		final Map<String,Double> deviationBudgetOfChimpumGroupedByCurrency;
-		final Map<String,Double> minimunBudgetOfChimpumGroupedByCurrency;
-		final Map<String,Double> maximunBudgetOfChimpumGroupedByCurrency;
+		//SISIT DECLARACION
+		final Double ratioOfToolsWithSisit;
+		final Map<String,Double> averageShareOfSisitGroupedByCurrency;
+		final Map<String,Double> deviationShareOfSisitGroupedByCurrency;
+		final Map<String,Double> minimunShareOfSisitGroupedByCurrency;
+		final Map<String,Double> maximunShareOfSisitGroupedByCurrency;
 		
 		//PATRONAGE DECLARACION
 		final AdministratorDashboard result;
@@ -105,11 +105,11 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		maximunBudgetOfToolGroupedByCurrency = this.parseTool(this.repository.maximunBudgetOfToolGroupedByCurrency());
 		
 		//TOOL INICIALIZACION
-		ratioOfItemsWithChimpum = this.repository.getRatioOfItemsWithChimpum();
-		averageBudgetOfChimpumGroupedByCurrency = this.parseTool(this.repository.getAverageBudgetOfChimpumGroupedByCurrency());
-		deviationBudgetOfChimpumGroupedByCurrency = this.parseTool(this.repository.getDeviationBudgetOfChimpumGroupedByCurrency());
-		minimunBudgetOfChimpumGroupedByCurrency = this.parseTool(this.repository.getMinimunBudgetOfChimpumGroupedByCurrency());
-		maximunBudgetOfChimpumGroupedByCurrency = this.parseTool(this.repository.getMaximunBudgetOfChimpumGroupedByCurrency());
+		ratioOfToolsWithSisit= this.repository.getRatioOfToolsWithSisit();
+		averageShareOfSisitGroupedByCurrency = this.parseTool(this.repository.getAverageShareOfSisitGroupedByCurrency());
+		deviationShareOfSisitGroupedByCurrency = this.parseTool(this.repository.getDeviationShareOfSisitGroupedByCurrency());
+		minimunShareOfSisitGroupedByCurrency = this.parseTool(this.repository.getDeviationShareOfSisitGroupedByCurrency());
+		maximunShareOfSisitGroupedByCurrency = this.parseTool(this.repository.getMaximunShareOfSisitGroupedByCurrency());
 	
 		//PATRONAGE INICIALIZACION
 		totalNumberOfProposedPatronages = this.repository.totalNumberOfProposedPatronages();
@@ -145,11 +145,11 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setMaximunBudgetOfToolGroupedByCurrency(maximunBudgetOfToolGroupedByCurrency);
 		
 		//CHIMPUM ASIGNACION
-		result.setRatioOfItemsWithChimpum(ratioOfItemsWithChimpum);;
-		result.setAverageBudgetOfChimpumGroupedByCurrency(averageBudgetOfChimpumGroupedByCurrency);
-		result.setDeviationBudgetOfChimpumGroupedByCurrency(deviationBudgetOfChimpumGroupedByCurrency);
-		result.setMinimunBudgetOfChimpumGroupedByCurrency(minimunBudgetOfChimpumGroupedByCurrency);
-		result.setMaximunBudgetOfChimpumGroupedByCurrency(maximunBudgetOfChimpumGroupedByCurrency);
+		result.setRatioOfToolsWithSisit(ratioOfToolsWithSisit);;
+		result.setAverageBudgetOfSisitGroupedByCurrency(averageShareOfSisitGroupedByCurrency);
+		result.setDeviationBudgetOfSisitGroupedByCurrency(deviationShareOfSisitGroupedByCurrency);
+		result.setMinimunBudgetOfSisitGroupedByCurrency(minimunShareOfSisitGroupedByCurrency);
+		result.setMaximunBudgetOfSisitGroupedByCurrency(maximunShareOfSisitGroupedByCurrency);
 		
 		//PATRONAGE ASIGNACION
 		
@@ -189,8 +189,8 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 			"totalNumberOfTools", "averageBudgetOfToolGroupedByCurrency", "deviationBudgetOfToolGroupedByCurrency", 
 			"minimunBudgetOfToolGroupedByCurrency", "maximunBudgetOfToolGroupedByCurrency",
 			
-			"ratioOfItemsWithChimpum", "averageBudgetOfChimpumGroupedByCurrency", "deviationBudgetOfChimpumGroupedByCurrency", 
-			"minimunBudgetOfChimpumGroupedByCurrency", "maximunBudgetOfChimpumGroupedByCurrency",
+			"ratioOfToolsWithSisit", "averageBudgetOfSisitGroupedByCurrency", "deviationBudgetOfSisitGroupedByCurrency", 
+			"minimunBudgetOfSisitGroupedByCurrency", "maximunBudgetOfSisitGroupedByCurrency",
 			
 			"totalNumberOfProposedPatronages", "totalNumberOfAcceptedPatronages", "totalNumberOfDeniedPatronages",
 			"averageBudgetOfPatronagesGroupedByStatusAndCurrency", "deviationBudgetOfPatronagesGroupedByStatusAndCurrency",
